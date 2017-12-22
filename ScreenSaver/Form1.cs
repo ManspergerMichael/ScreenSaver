@@ -54,8 +54,7 @@ namespace ScreenSaver
                 BritPic mp = new BritPic();
                 mp.PicNum = ii % BGImages.Count;
                 mp.x = rand.Next(0, Width);
-                mp.y = rand.Next(0, Height);
-                                
+                mp.y = rand.Next(0, Height);                                
                 BritPics.Add(mp);
             }
         }
