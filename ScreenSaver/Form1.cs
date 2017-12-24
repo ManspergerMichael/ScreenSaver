@@ -64,12 +64,15 @@ namespace ScreenSaver
             Refresh();
         }
 
+        //Paints the images accross the screen. once it reaches a limit, 
+        //a new random number is generated 
         private void frmScreenSaver_Paint(object sender, PaintEventArgs e)
         {
             foreach (BritPic bp in BritPics)
             {
                 e.Graphics.DrawImage(BGImages[bp.PicNum], bp.x, bp.y);
                 bp.x -= 2;
+                bp.y += 2;
 
                 if (bp.x < -250)
                 {
